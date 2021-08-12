@@ -50,7 +50,6 @@ function leerValor(e){
 
 function verificarFormulario(e){
     e.preventDefault();
-    console.log(objBusqueda);
 
     const {moneda, cripto} = objBusqueda;
 
@@ -61,7 +60,6 @@ function verificarFormulario(e){
 
     // Consultar API
     consultarAPI();
-
 }
 
 function mostrarAlerta(mensaje){
@@ -94,7 +92,7 @@ function consultarAPI(){
 
 function mostrarCotizacionHTML(cotizacion){
     limpiarHTML();
-    
+
     const {PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE} = cotizacion;
 
     const precio = document.createElement('p');
